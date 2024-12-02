@@ -1,0 +1,26 @@
+replicaCount: 1
+
+backend:
+  image:
+    repository: shreybatra/sample-backend
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 8000
+
+frontend:
+  image:
+    repository: shreybatra/sample-frontend
+    pullPolicy: IfNotPresent
+  service:
+    type: NodePort
+    port: 5175
+    nodePort: 31000
+
+redis:
+  image:
+    repository: redis
+    pullPolicy: IfNotPresent
+  service:
+    type: ClusterIP
+    port: 6379
