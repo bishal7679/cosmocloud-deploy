@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: redis-deployment
   namespace: default
+  labels:
+    app: redis
 spec:
   replicas: {{ .Values.replicaCount }}
   selector:
