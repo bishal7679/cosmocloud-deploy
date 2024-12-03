@@ -57,7 +57,7 @@ frontend:                               # Frontend configuration
     pullPolicy: IfNotPresent
   service:
     type: NodePort                     # using NodePort as service type to expose it to user in order to access the application
-    port: 5175
+    port: 5173
     nodePort: 31000
 
 redis:                                 # Redis configuration

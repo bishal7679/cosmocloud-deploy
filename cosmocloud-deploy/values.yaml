@@ -2,7 +2,7 @@ replicaCount: 1
 
 backend:
   image:
-    repository: shreybatra/sample-backend:latest
+    repository: shreybatra/sample-backend
     pullPolicy: IfNotPresent
   service:
     type: ClusterIP
@@ -10,11 +10,11 @@ backend:
 
 frontend:
   image:
-    repository: shreybatra/sample-frontend:latest
+    repository: shreybatra/sample-frontend
     pullPolicy: IfNotPresent
   service:
     type: NodePort
-    port: 5175
+    port: 5173
     nodePort: 31000
 
 redis:
