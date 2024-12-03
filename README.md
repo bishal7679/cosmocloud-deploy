@@ -238,8 +238,8 @@ kubectl get all -n default
 ```
 
    ### 5. Access Services
-   - Frontend: Use the NodePort (e.g., `http://<NodeIP>:31000`).
-   - Backend & Redis: Access internally using service names (`backend-svc` and `redis-svc`).
+   - Frontend: Use the NodePort (e.g., `http://<NodeIP>:31000` or `localhost:31000` NOTE:- [use port forwarding to access the nodeport on localhost]).
+     Refer this post if you are using kind cluster for config.yaml [Link](https://stackoverflow.com/questions/62432961/how-to-use-nodeport-with-kind)
 
 ## 🛠️ Customization
 Modify `values.yaml` to adjust configurations such as image versions, ports, and environment variables.
